@@ -1,20 +1,10 @@
 #pragma once
 #include <iostream>
 #include "MyRandomLib.h"
+#include "MyMathLib.h"
 using namespace std;
 
 namespace MyArray {
-
-	//This Section Will Be Moved To Another Array
-	bool IsPrime(int num) {
-		if (num < 2)
-			return false;
-		for (int i = 2; i <= num / 2; i++) {
-			if (num % i == 0)
-				return false;
-		}
-		return true;
-	}
 
 	void Swap(int& a, int& b) {
 		int temp = a;
@@ -74,7 +64,7 @@ namespace MyArray {
 	void CopyPrimeNumArray(int arrSource[100], int arrDestination[100], int lenSource, int& lenDestination) {
 		lenDestination = 0;
 		for (int i = 0; i < lenSource; i++) {
-			if (IsPrime(arrSource[i])) {
+			if (MyMath::IsPrime(arrSource[i])) {
 				arrDestination[lenDestination] = arrSource[i];
 				lenDestination++;
 			}
