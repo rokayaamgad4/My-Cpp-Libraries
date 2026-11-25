@@ -28,6 +28,20 @@ namespace MyInput {
 		return num;
 	}
 
+	int ReadValidNumber() {
+		int num;
+		cout << "Please Enter Number : \n";
+		cin >> num;
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Number ,Please Enter Valid Number : \n";
+			cin >> num;
+		}
+		return num;
+	}
+
+
 	float ReadFloatNum() {
 		float num ;
 		cin >> num;
