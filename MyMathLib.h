@@ -20,6 +20,18 @@ namespace MyMath {
 		return  (num % 2 != 0);
 	}
 
+	bool IsPositive(int num) {
+		return (num > 0) ? true : false;
+	}
+
+	bool IsNegative(int num) {
+		return (num < 0) ? true : false;
+	}
+
+	bool IsZero(int num) {
+		return (num == 0) ? true : false;
+	}
+
 	int MaxOf3Nums(int a, int b, int c) {
 		if (a >= b && a >= c)
 			return a;
